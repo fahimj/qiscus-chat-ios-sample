@@ -20,7 +20,7 @@ protocol ChatBusinessLogic
 
 protocol ChatDataStore
 {
-    //var name: String { get set }
+    var roomId: String! { get set }
 }
 
 class ChatInteractor: ChatBusinessLogic, ChatDataStore

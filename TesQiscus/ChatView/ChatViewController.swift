@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import QiscusCore
 
 protocol ChatDisplayLogic: class
 {
@@ -69,6 +70,10 @@ class ChatViewController: UIViewController, ChatDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        //setup table view
+        tableView.dataSource = self
+        
         fetchChat()
     }
     
@@ -76,10 +81,12 @@ class ChatViewController: UIViewController, ChatDisplayLogic
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextView: UITextView!
     
+    var comments:[CommentModel]?
+    
     func fetchChat()
     {
         let request = Chat.FetchChat.Request()
-        interactor?.doSomething(request: request)
+        interactor?.fetchChats(request: request)
     }
     
     @IBAction func sendMessageAction(_ sender: Any) {
@@ -88,6 +95,25 @@ class ChatViewController: UIViewController, ChatDisplayLogic
     
     func display(viewModel: Chat.FetchChat.ViewModel)
     {
+        comments = viewModel.comments
+        tableView.reloadData()
         //nameTextField.text = viewModel.name
     }
+}
+
+extension ChatViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return comments?.count ?? 0
+        }
+        
+        func tableView(_ tableView: UITableView,
+                                cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatViewCell", for: indexPath) as! ChatViewCell
+            let comment = comments![indexPath.row]
+            
+            cell.messageLabel.text = comment.message
+            cell.messageSentStatus.text = comment.status.rawValue
+
+            return cell
+        }
 }

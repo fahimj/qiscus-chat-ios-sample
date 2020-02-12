@@ -132,7 +132,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="hpH-5B-o6e" kind="show" id="8Q3-ki-cra"/>
+                                    <segue destination="hpH-5B-o6e" kind="show" identifier="ChatView" id="8Q3-ki-cra"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

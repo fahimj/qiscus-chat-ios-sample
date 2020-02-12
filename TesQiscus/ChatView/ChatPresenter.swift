@@ -25,7 +25,7 @@ class ChatPresenter: ChatPresentationLogic
     
     func present(response: Chat.FetchChat.Response)
     {
-        let viewModel = Chat.FetchChat.ViewModel()
+        let viewModel = Chat.FetchChat.ViewModel(comments: response.comments)
         viewController?.display(viewModel: viewModel)
     }
 }

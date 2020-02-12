@@ -21,13 +21,15 @@ protocol ChatListBusinessLogic
 
 protocol ChatListDataStore
 {
-    //var name: String { get set }
+    var chatrooms: [RoomModel]? { get set }
 }
 
 class ChatListInteractor: ChatListBusinessLogic, ChatListDataStore
 {
     var presenter: ChatListPresentationLogic?
     var worker: ChatListWorker?
+    
+    var chatrooms: [RoomModel]?
     //var name: String = ""
     
     // MARK: Do something
@@ -35,6 +37,7 @@ class ChatListInteractor: ChatListBusinessLogic, ChatListDataStore
     func fetchChatList(request: ChatList.FetchChatList.Request) {
         QiscusCore.shared.getAllChatRooms(showParticipant: true, showRemoved: false, showEmpty: true, page: 1, limit: 100, onSuccess: { (results, meta) in
             
+            self.chatrooms = results
             self.presenter?.present(response: ChatList.FetchChatList.Response(rooms: results))
 //            self.rooms = self.filterRoom(data: results)
 //            self.rooms = self.self.isShowUnread ? self.filterUnreadRooms(rooms: self.rooms) ?? [] : self.rooms

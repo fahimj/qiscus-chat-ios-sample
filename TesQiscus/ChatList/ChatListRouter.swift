@@ -14,7 +14,7 @@ import UIKit
 
 @objc protocol ChatListRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+  func routeToChatView(segue: UIStoryboardSegue?)
 }
 
 protocol ChatListDataPassing
@@ -29,32 +29,36 @@ class ChatListRouter: NSObject, ChatListRoutingLogic, ChatListDataPassing
   
   // MARK: Routing
   
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+  func routeToChatView(segue: UIStoryboardSegue?)
+  {
+    if let segue = segue {
+      let destinationVC = segue.destination as! ChatViewController
+      var destinationDS = destinationVC.router!.dataStore!
+        
+      passDataToChatView(source: dataStore!, destination: &destinationDS)
+    } else {
+//      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//      let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
+//      var destinationDS = destinationVC.router!.dataStore!
+//      passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+//      navigateToSomewhere(source: viewController!, destination: destinationVC)
+    }
+  }
 
   // MARK: Navigation
   
-  //func navigateToSomewhere(source: ChatListViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
+  func navigateToChatView(source: ChatListViewController, destination: ChatViewController)
+  {
+    source.show(destination, sender: nil)
+  }
   
   // MARK: Passing data
   
-  //func passDataToSomewhere(source: ChatListDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+  func passDataToChatView(source: ChatListDataStore, destination: inout ChatDataStore)
+  {
+    let selectedRow = viewController!.tableView.indexPathForSelectedRow!.row
+    let selectedRoomId = source.chatrooms![selectedRow].id
+    
+    destination.roomId = selectedRoomId
+  }
 }

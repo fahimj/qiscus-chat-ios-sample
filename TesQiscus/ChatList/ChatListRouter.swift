@@ -57,8 +57,8 @@ class ChatListRouter: NSObject, ChatListRoutingLogic, ChatListDataPassing
   func passDataToChatView(source: ChatListDataStore, destination: inout ChatDataStore)
   {
     let selectedRow = viewController!.tableView.indexPathForSelectedRow!.row
-    let selectedRoomId = source.chatrooms![selectedRow].id
+    let selectedRoom = source.chatrooms![selectedRow]
     
-    destination.roomId = selectedRoomId
+    destination.room = selectedRoom
   }
 }

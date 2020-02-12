@@ -70,11 +70,19 @@ class ChatViewController: UIViewController, ChatDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        //setup table view
-        tableView.dataSource = self
+        setupTableView()
         
         fetchChat()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    func setupTableView() {
+        tableView.dataSource = self
+        let rotate = CGAffineTransform(rotationAngle: .pi)
+        self.tableView.transform = rotate
     }
     
     // MARK: Do something
@@ -90,7 +98,8 @@ class ChatViewController: UIViewController, ChatDisplayLogic
     }
     
     @IBAction func sendMessageAction(_ sender: Any) {
-        
+        let request = Chat.SendChat.Request(message: messageTextView.text)
+        interactor?.sendMessage(request: request)
     }
     
     func display(viewModel: Chat.FetchChat.ViewModel)
@@ -103,17 +112,20 @@ class ChatViewController: UIViewController, ChatDisplayLogic
 
 extension ChatViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return comments?.count ?? 0
-        }
+        return comments?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatViewCell", for: indexPath) as! ChatViewCell
+        let comment = comments![indexPath.row]
         
-        func tableView(_ tableView: UITableView,
-                                cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatViewCell", for: indexPath) as! ChatViewCell
-            let comment = comments![indexPath.row]
-            
-            cell.messageLabel.text = comment.message
-            cell.messageSentStatus.text = comment.status.rawValue
-
-            return cell
-        }
+        cell.messageLabel.text = comment.message
+        cell.messageSentStatus.text = comment.status.rawValue
+        
+        let rotate = CGAffineTransform(rotationAngle: .pi)
+        cell.transform = rotate
+        
+        return cell
+    }
 }

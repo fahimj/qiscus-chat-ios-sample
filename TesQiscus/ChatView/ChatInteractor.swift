@@ -16,11 +16,13 @@ import QiscusCore
 protocol ChatBusinessLogic
 {
     func fetchChats(request: Chat.FetchChat.Request)
+    func sendMessage(request: Chat.SendChat.Request)
 }
 
 protocol ChatDataStore
 {
-    var roomId: String! { get set }
+    var room: RoomModel! { get set }
+    var comments: [CommentModel] {get set}
 }
 
 class ChatInteractor: ChatBusinessLogic, ChatDataStore
@@ -28,16 +30,85 @@ class ChatInteractor: ChatBusinessLogic, ChatDataStore
     var presenter: ChatPresentationLogic?
     var worker: ChatWorker?
     //var name: String = ""
-    var roomId:String!
+    var room:RoomModel! {
+        didSet {
+            room.delegate = self
+        }
+    }
+    var comments: [CommentModel] = []
     
     // MARK: Do something
     
     func fetchChats(request: Chat.FetchChat.Request) {
-        QiscusCore.shared.getChatRoomWithMessages(roomId: self.roomId, onSuccess: {room, comments in
+        QiscusCore.shared.getChatRoomWithMessages(roomId: self.room.id, onSuccess: {room, comments in
+            self.comments = comments
             let response = Chat.FetchChat.Response(comments: comments)
             self.presenter?.present(response: response)
         }, onError: {error in
             
         })
+    }
+    
+    func sendMessage(request: Chat.SendChat.Request) {
+        let message = CommentModel()
+        message.message = request.message
+        message.type    = "text"
+        message.roomId  = room.id
+        
+        QiscusCore.shared.sendMessage(message: message, onSuccess:{ [weak self] (comment) in
+            
+            self!.comments.insert(comment, at: 0)
+            let response = Chat.FetchChat.Response(comments: self!.comments)
+            self?.presenter?.present(response: response)
+        }) { (error) in
+            //
+        }
+    }
+    
+}
+
+// MARK: Core Delegate
+extension ChatInteractor : QiscusCoreRoomDelegate {
+    func didComment(comment: CommentModel, changeStatus status: CommentStatus) {
+        
+    }
+    
+    func onMessageDelivered(message: CommentModel) {
+        
+    }
+    
+    func onMessageRead(message: CommentModel) {
+        
+    }
+    
+    func onMessageDeleted(message: CommentModel) {
+        
+    }
+    
+    func onUserTyping(userId: String, roomId: String, typing: Bool) {
+        
+    }
+    
+    func onUserOnlinePresence(userId: String, isOnline: Bool, lastSeen: Date) {
+        
+    }
+    
+    func onRoom(update room: RoomModel) {
+        
+    }
+    
+    func onMessageReceived(message: CommentModel){
+        if (self.getIndexPath(comment: message) == nil) {
+            self.comments.insert(message, at: 0)
+            let response = Chat.FetchChat.Response(comments: self.comments)
+            self.presenter?.present(response: response)
+        }
+    }
+    
+    func getIndexPath(comment : CommentModel) -> Int? {
+        if let index = self.comments.firstIndex(where: { $0.uniqId == comment.uniqId }){
+            return index
+        }
+        return nil
     }
 }

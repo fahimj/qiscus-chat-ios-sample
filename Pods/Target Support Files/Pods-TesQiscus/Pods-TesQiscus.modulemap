@@ -1,0 +1,6 @@
+framework module Pods_TesQiscus {
+  umbrella header "Pods-TesQiscus-umbrella.h"
+
+  export *
+  module * { export * }
+}

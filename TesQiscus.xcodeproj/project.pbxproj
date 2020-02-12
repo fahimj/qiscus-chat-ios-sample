@@ -1,0 +1,675 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11E4F26B507191614C6DC0CC /* Pods_TesQiscus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08383D27E18E5CF8E031F215 /* Pods_TesQiscus.framework */; };
+		DD872BA323F3B494003B2B42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BA223F3B494003B2B42 /* AppDelegate.swift */; };
+		DD872BA523F3B494003B2B42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BA423F3B494003B2B42 /* SceneDelegate.swift */; };
+		DD872BA723F3B494003B2B42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BA623F3B494003B2B42 /* ViewController.swift */; };
+		DD872BAA23F3B494003B2B42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD872BA823F3B494003B2B42 /* Main.storyboard */; };
+		DD872BAC23F3B496003B2B42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD872BAB23F3B496003B2B42 /* Assets.xcassets */; };
+		DD872BAF23F3B496003B2B42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD872BAD23F3B496003B2B42 /* LaunchScreen.storyboard */; };
+		DD872BBA23F3B497003B2B42 /* TesQiscusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BB923F3B497003B2B42 /* TesQiscusTests.swift */; };
+		DD872BCD23F3B76A003B2B42 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BC723F3B76A003B2B42 /* LoginPresenter.swift */; };
+		DD872BCE23F3B76A003B2B42 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BC823F3B76A003B2B42 /* LoginWorker.swift */; };
+		DD872BCF23F3B76A003B2B42 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BC923F3B76A003B2B42 /* LoginRouter.swift */; };
+		DD872BD023F3B76A003B2B42 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BCA23F3B76A003B2B42 /* LoginModels.swift */; };
+		DD872BD123F3B76A003B2B42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BCB23F3B76A003B2B42 /* LoginViewController.swift */; };
+		DD872BD223F3B76A003B2B42 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BCC23F3B76A003B2B42 /* LoginInteractor.swift */; };
+		DD872BE523F3B79A003B2B42 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BDF23F3B79A003B2B42 /* ChatPresenter.swift */; };
+		DD872BE623F3B79A003B2B42 /* ChatWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BE023F3B79A003B2B42 /* ChatWorker.swift */; };
+		DD872BE723F3B79A003B2B42 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BE123F3B79A003B2B42 /* ChatRouter.swift */; };
+		DD872BE823F3B79A003B2B42 /* ChatModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BE223F3B79A003B2B42 /* ChatModels.swift */; };
+		DD872BE923F3B79A003B2B42 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BE323F3B79A003B2B42 /* ChatViewController.swift */; };
+		DD872BEA23F3B79A003B2B42 /* ChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BE423F3B79A003B2B42 /* ChatInteractor.swift */; };
+		DD872BF123F3B7B2003B2B42 /* ChatListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BEB23F3B7B2003B2B42 /* ChatListPresenter.swift */; };
+		DD872BF223F3B7B2003B2B42 /* ChatListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BEC23F3B7B2003B2B42 /* ChatListWorker.swift */; };
+		DD872BF323F3B7B2003B2B42 /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BED23F3B7B2003B2B42 /* ChatListRouter.swift */; };
+		DD872BF423F3B7B2003B2B42 /* ChatListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BEE23F3B7B2003B2B42 /* ChatListModels.swift */; };
+		DD872BF523F3B7B2003B2B42 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BEF23F3B7B2003B2B42 /* ChatListViewController.swift */; };
+		DD872BF623F3B7B2003B2B42 /* ChatListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BF023F3B7B2003B2B42 /* ChatListInteractor.swift */; };
+		EA77FE79CC6A0A97572FCFBA /* Pods_TesQiscusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAAFBF49E2FBD5D977C1325 /* Pods_TesQiscusTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD872BB623F3B497003B2B42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD872B9723F3B494003B2B42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD872B9E23F3B494003B2B42;
+			remoteInfo = TesQiscus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08383D27E18E5CF8E031F215 /* Pods_TesQiscus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesQiscus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D4C5A3174E45157EF56C0C8 /* Pods-TesQiscusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesQiscusTests.release.xcconfig"; path = "Target Support Files/Pods-TesQiscusTests/Pods-TesQiscusTests.release.xcconfig"; sourceTree = "<group>"; };
+		8AAAFBF49E2FBD5D977C1325 /* Pods_TesQiscusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TesQiscusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DEC0F71B7DD567E07B927A8 /* Pods-TesQiscusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesQiscusTests.debug.xcconfig"; path = "Target Support Files/Pods-TesQiscusTests/Pods-TesQiscusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE7FD53ECDEE3F9271EA5B4A /* Pods-TesQiscus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesQiscus.debug.xcconfig"; path = "Target Support Files/Pods-TesQiscus/Pods-TesQiscus.debug.xcconfig"; sourceTree = "<group>"; };
+		D589D33A71CF643E2D3A995C /* Pods-TesQiscus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TesQiscus.release.xcconfig"; path = "Target Support Files/Pods-TesQiscus/Pods-TesQiscus.release.xcconfig"; sourceTree = "<group>"; };
+		DD872B9F23F3B494003B2B42 /* TesQiscus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesQiscus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD872BA223F3B494003B2B42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DD872BA423F3B494003B2B42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DD872BA623F3B494003B2B42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DD872BA923F3B494003B2B42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DD872BAB23F3B496003B2B42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD872BAE23F3B496003B2B42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DD872BB023F3B496003B2B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD872BB523F3B497003B2B42 /* TesQiscusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TesQiscusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD872BB923F3B497003B2B42 /* TesQiscusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesQiscusTests.swift; sourceTree = "<group>"; };
+		DD872BBB23F3B497003B2B42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD872BC723F3B76A003B2B42 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		DD872BC823F3B76A003B2B42 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		DD872BC923F3B76A003B2B42 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		DD872BCA23F3B76A003B2B42 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		DD872BCB23F3B76A003B2B42 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DD872BCC23F3B76A003B2B42 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		DD872BDF23F3B79A003B2B42 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
+		DD872BE023F3B79A003B2B42 /* ChatWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWorker.swift; sourceTree = "<group>"; };
+		DD872BE123F3B79A003B2B42 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
+		DD872BE223F3B79A003B2B42 /* ChatModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModels.swift; sourceTree = "<group>"; };
+		DD872BE323F3B79A003B2B42 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		DD872BE423F3B79A003B2B42 /* ChatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInteractor.swift; sourceTree = "<group>"; };
+		DD872BEB23F3B7B2003B2B42 /* ChatListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListPresenter.swift; sourceTree = "<group>"; };
+		DD872BEC23F3B7B2003B2B42 /* ChatListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListWorker.swift; sourceTree = "<group>"; };
+		DD872BED23F3B7B2003B2B42 /* ChatListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListRouter.swift; sourceTree = "<group>"; };
+		DD872BEE23F3B7B2003B2B42 /* ChatListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListModels.swift; sourceTree = "<group>"; };
+		DD872BEF23F3B7B2003B2B42 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		DD872BF023F3B7B2003B2B42 /* ChatListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListInteractor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD872B9C23F3B494003B2B42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11E4F26B507191614C6DC0CC /* Pods_TesQiscus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD872BB223F3B497003B2B42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA77FE79CC6A0A97572FCFBA /* Pods_TesQiscusTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07439611FE6BB515EB100FA8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08383D27E18E5CF8E031F215 /* Pods_TesQiscus.framework */,
+				8AAAFBF49E2FBD5D977C1325 /* Pods_TesQiscusTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91D5F74304BBA3E5B0F14495 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE7FD53ECDEE3F9271EA5B4A /* Pods-TesQiscus.debug.xcconfig */,
+				D589D33A71CF643E2D3A995C /* Pods-TesQiscus.release.xcconfig */,
+				9DEC0F71B7DD567E07B927A8 /* Pods-TesQiscusTests.debug.xcconfig */,
+				1D4C5A3174E45157EF56C0C8 /* Pods-TesQiscusTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD872B9623F3B494003B2B42 = {
+			isa = PBXGroup;
+			children = (
+				DD872BA123F3B494003B2B42 /* TesQiscus */,
+				DD872BB823F3B497003B2B42 /* TesQiscusTests */,
+				DD872BA023F3B494003B2B42 /* Products */,
+				91D5F74304BBA3E5B0F14495 /* Pods */,
+				07439611FE6BB515EB100FA8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DD872BA023F3B494003B2B42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD872B9F23F3B494003B2B42 /* TesQiscus.app */,
+				DD872BB523F3B497003B2B42 /* TesQiscusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD872BA123F3B494003B2B42 /* TesQiscus */ = {
+			isa = PBXGroup;
+			children = (
+				DD872BC623F3B750003B2B42 /* ChatView */,
+				DD872BC523F3B749003B2B42 /* ChatList */,
+				DD872BC423F3B73B003B2B42 /* Login */,
+				DD872BA223F3B494003B2B42 /* AppDelegate.swift */,
+				DD872BA423F3B494003B2B42 /* SceneDelegate.swift */,
+				DD872BA623F3B494003B2B42 /* ViewController.swift */,
+				DD872BA823F3B494003B2B42 /* Main.storyboard */,
+				DD872BAB23F3B496003B2B42 /* Assets.xcassets */,
+				DD872BAD23F3B496003B2B42 /* LaunchScreen.storyboard */,
+				DD872BB023F3B496003B2B42 /* Info.plist */,
+			);
+			path = TesQiscus;
+			sourceTree = "<group>";
+		};
+		DD872BB823F3B497003B2B42 /* TesQiscusTests */ = {
+			isa = PBXGroup;
+			children = (
+				DD872BB923F3B497003B2B42 /* TesQiscusTests.swift */,
+				DD872BBB23F3B497003B2B42 /* Info.plist */,
+			);
+			path = TesQiscusTests;
+			sourceTree = "<group>";
+		};
+		DD872BC423F3B73B003B2B42 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DD872BC723F3B76A003B2B42 /* LoginPresenter.swift */,
+				DD872BC823F3B76A003B2B42 /* LoginWorker.swift */,
+				DD872BC923F3B76A003B2B42 /* LoginRouter.swift */,
+				DD872BCA23F3B76A003B2B42 /* LoginModels.swift */,
+				DD872BCB23F3B76A003B2B42 /* LoginViewController.swift */,
+				DD872BCC23F3B76A003B2B42 /* LoginInteractor.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DD872BC523F3B749003B2B42 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				DD872BEB23F3B7B2003B2B42 /* ChatListPresenter.swift */,
+				DD872BEC23F3B7B2003B2B42 /* ChatListWorker.swift */,
+				DD872BED23F3B7B2003B2B42 /* ChatListRouter.swift */,
+				DD872BEE23F3B7B2003B2B42 /* ChatListModels.swift */,
+				DD872BEF23F3B7B2003B2B42 /* ChatListViewController.swift */,
+				DD872BF023F3B7B2003B2B42 /* ChatListInteractor.swift */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		DD872BC623F3B750003B2B42 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				DD872BDF23F3B79A003B2B42 /* ChatPresenter.swift */,
+				DD872BE023F3B79A003B2B42 /* ChatWorker.swift */,
+				DD872BE123F3B79A003B2B42 /* ChatRouter.swift */,
+				DD872BE223F3B79A003B2B42 /* ChatModels.swift */,
+				DD872BE323F3B79A003B2B42 /* ChatViewController.swift */,
+				DD872BE423F3B79A003B2B42 /* ChatInteractor.swift */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DD872B9E23F3B494003B2B42 /* TesQiscus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD872BBE23F3B497003B2B42 /* Build configuration list for PBXNativeTarget "TesQiscus" */;
+			buildPhases = (
+				91D71A875F009ED90E4012A7 /* [CP] Check Pods Manifest.lock */,
+				DD872B9B23F3B494003B2B42 /* Sources */,
+				DD872B9C23F3B494003B2B42 /* Frameworks */,
+				DD872B9D23F3B494003B2B42 /* Resources */,
+				F28F246E8474E59FC0E9688D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TesQiscus;
+			productName = TesQiscus;
+			productReference = DD872B9F23F3B494003B2B42 /* TesQiscus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DD872BB423F3B497003B2B42 /* TesQiscusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD872BC123F3B497003B2B42 /* Build configuration list for PBXNativeTarget "TesQiscusTests" */;
+			buildPhases = (
+				9FBD8593F09080C79DEF360A /* [CP] Check Pods Manifest.lock */,
+				DD872BB123F3B497003B2B42 /* Sources */,
+				DD872BB223F3B497003B2B42 /* Frameworks */,
+				DD872BB323F3B497003B2B42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD872BB723F3B497003B2B42 /* PBXTargetDependency */,
+			);
+			name = TesQiscusTests;
+			productName = TesQiscusTests;
+			productReference = DD872BB523F3B497003B2B42 /* TesQiscusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD872B9723F3B494003B2B42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = Fahim;
+				TargetAttributes = {
+					DD872B9E23F3B494003B2B42 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					DD872BB423F3B497003B2B42 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = DD872B9E23F3B494003B2B42;
+					};
+				};
+			};
+			buildConfigurationList = DD872B9A23F3B494003B2B42 /* Build configuration list for PBXProject "TesQiscus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD872B9623F3B494003B2B42;
+			productRefGroup = DD872BA023F3B494003B2B42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD872B9E23F3B494003B2B42 /* TesQiscus */,
+				DD872BB423F3B497003B2B42 /* TesQiscusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD872B9D23F3B494003B2B42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD872BAF23F3B496003B2B42 /* LaunchScreen.storyboard in Resources */,
+				DD872BAC23F3B496003B2B42 /* Assets.xcassets in Resources */,
+				DD872BAA23F3B494003B2B42 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD872BB323F3B497003B2B42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		91D71A875F009ED90E4012A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TesQiscus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FBD8593F09080C79DEF360A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TesQiscusTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F28F246E8474E59FC0E9688D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TesQiscus/Pods-TesQiscus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TesQiscus/Pods-TesQiscus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TesQiscus/Pods-TesQiscus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD872B9B23F3B494003B2B42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD872BE723F3B79A003B2B42 /* ChatRouter.swift in Sources */,
+				DD872BE823F3B79A003B2B42 /* ChatModels.swift in Sources */,
+				DD872BCE23F3B76A003B2B42 /* LoginWorker.swift in Sources */,
+				DD872BF223F3B7B2003B2B42 /* ChatListWorker.swift in Sources */,
+				DD872BCD23F3B76A003B2B42 /* LoginPresenter.swift in Sources */,
+				DD872BD023F3B76A003B2B42 /* LoginModels.swift in Sources */,
+				DD872BCF23F3B76A003B2B42 /* LoginRouter.swift in Sources */,
+				DD872BF123F3B7B2003B2B42 /* ChatListPresenter.swift in Sources */,
+				DD872BF623F3B7B2003B2B42 /* ChatListInteractor.swift in Sources */,
+				DD872BF323F3B7B2003B2B42 /* ChatListRouter.swift in Sources */,
+				DD872BEA23F3B79A003B2B42 /* ChatInteractor.swift in Sources */,
+				DD872BF423F3B7B2003B2B42 /* ChatListModels.swift in Sources */,
+				DD872BE523F3B79A003B2B42 /* ChatPresenter.swift in Sources */,
+				DD872BD123F3B76A003B2B42 /* LoginViewController.swift in Sources */,
+				DD872BA723F3B494003B2B42 /* ViewController.swift in Sources */,
+				DD872BF523F3B7B2003B2B42 /* ChatListViewController.swift in Sources */,
+				DD872BA323F3B494003B2B42 /* AppDelegate.swift in Sources */,
+				DD872BA523F3B494003B2B42 /* SceneDelegate.swift in Sources */,
+				DD872BE623F3B79A003B2B42 /* ChatWorker.swift in Sources */,
+				DD872BD223F3B76A003B2B42 /* LoginInteractor.swift in Sources */,
+				DD872BE923F3B79A003B2B42 /* ChatViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD872BB123F3B497003B2B42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD872BBA23F3B497003B2B42 /* TesQiscusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD872BB723F3B497003B2B42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD872B9E23F3B494003B2B42 /* TesQiscus */;
+			targetProxy = DD872BB623F3B497003B2B42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DD872BA823F3B494003B2B42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD872BA923F3B494003B2B42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DD872BAD23F3B496003B2B42 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD872BAE23F3B496003B2B42 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DD872BBC23F3B497003B2B42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD872BBD23F3B497003B2B42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD872BBF23F3B497003B2B42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE7FD53ECDEE3F9271EA5B4A /* Pods-TesQiscus.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQD4F29D6R;
+				INFOPLIST_FILE = TesQiscus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fahim.TesQiscus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DD872BC023F3B497003B2B42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D589D33A71CF643E2D3A995C /* Pods-TesQiscus.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQD4F29D6R;
+				INFOPLIST_FILE = TesQiscus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fahim.TesQiscus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DD872BC223F3B497003B2B42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DEC0F71B7DD567E07B927A8 /* Pods-TesQiscusTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQD4F29D6R;
+				INFOPLIST_FILE = TesQiscusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fahim.TesQiscusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TesQiscus.app/TesQiscus";
+			};
+			name = Debug;
+		};
+		DD872BC323F3B497003B2B42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D4C5A3174E45157EF56C0C8 /* Pods-TesQiscusTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QQD4F29D6R;
+				INFOPLIST_FILE = TesQiscusTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fahim.TesQiscusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TesQiscus.app/TesQiscus";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD872B9A23F3B494003B2B42 /* Build configuration list for PBXProject "TesQiscus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD872BBC23F3B497003B2B42 /* Debug */,
+				DD872BBD23F3B497003B2B42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD872BBE23F3B497003B2B42 /* Build configuration list for PBXNativeTarget "TesQiscus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD872BBF23F3B497003B2B42 /* Debug */,
+				DD872BC023F3B497003B2B42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD872BC123F3B497003B2B42 /* Build configuration list for PBXNativeTarget "TesQiscusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD872BC223F3B497003B2B42 /* Debug */,
+				DD872BC323F3B497003B2B42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD872B9723F3B494003B2B42 /* Project object */;
+}

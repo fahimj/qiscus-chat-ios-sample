@@ -1,0 +1,8 @@
+${PODS_ROOT}/Target Support Files/Pods-TesQiscus/Pods-TesQiscus-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework
+${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework
+${PODS_ROOT}/QiscusCore/QiscusCore.framework
+${PODS_ROOT}/QiscusCore/QiscusCore.framework.dSYM
+${PODS_ROOT}/QiscusRealtime/QiscusRealtime.framework
+${PODS_ROOT}/QiscusRealtime/QiscusRealtime.framework.dSYM
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

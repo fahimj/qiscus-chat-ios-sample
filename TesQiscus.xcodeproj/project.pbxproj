@@ -21,18 +21,19 @@
 		DD872BD023F3B76A003B2B42 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BCA23F3B76A003B2B42 /* LoginModels.swift */; };
 		DD872BD123F3B76A003B2B42 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BCB23F3B76A003B2B42 /* LoginViewController.swift */; };
 		DD872BD223F3B76A003B2B42 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BCC23F3B76A003B2B42 /* LoginInteractor.swift */; };
-		DD872BE523F3B79A003B2B42 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BDF23F3B79A003B2B42 /* ChatPresenter.swift */; };
-		DD872BE623F3B79A003B2B42 /* ChatWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BE023F3B79A003B2B42 /* ChatWorker.swift */; };
-		DD872BE723F3B79A003B2B42 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BE123F3B79A003B2B42 /* ChatRouter.swift */; };
-		DD872BE823F3B79A003B2B42 /* ChatModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BE223F3B79A003B2B42 /* ChatModels.swift */; };
-		DD872BE923F3B79A003B2B42 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BE323F3B79A003B2B42 /* ChatViewController.swift */; };
-		DD872BEA23F3B79A003B2B42 /* ChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BE423F3B79A003B2B42 /* ChatInteractor.swift */; };
 		DD872BF123F3B7B2003B2B42 /* ChatListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BEB23F3B7B2003B2B42 /* ChatListPresenter.swift */; };
 		DD872BF223F3B7B2003B2B42 /* ChatListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BEC23F3B7B2003B2B42 /* ChatListWorker.swift */; };
 		DD872BF323F3B7B2003B2B42 /* ChatListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BED23F3B7B2003B2B42 /* ChatListRouter.swift */; };
 		DD872BF423F3B7B2003B2B42 /* ChatListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BEE23F3B7B2003B2B42 /* ChatListModels.swift */; };
 		DD872BF523F3B7B2003B2B42 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BEF23F3B7B2003B2B42 /* ChatListViewController.swift */; };
 		DD872BF623F3B7B2003B2B42 /* ChatListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BF023F3B7B2003B2B42 /* ChatListInteractor.swift */; };
+		DD872BF923F3CE7A003B2B42 /* ChatViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BF823F3CE7A003B2B42 /* ChatViewCell.swift */; };
+		DD872C0023F3D03C003B2B42 /* ChatPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BFA23F3D03C003B2B42 /* ChatPresenter.swift */; };
+		DD872C0123F3D03C003B2B42 /* ChatWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BFB23F3D03C003B2B42 /* ChatWorker.swift */; };
+		DD872C0223F3D03C003B2B42 /* ChatRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BFC23F3D03C003B2B42 /* ChatRouter.swift */; };
+		DD872C0323F3D03C003B2B42 /* ChatModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BFD23F3D03C003B2B42 /* ChatModels.swift */; };
+		DD872C0423F3D03C003B2B42 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BFE23F3D03C003B2B42 /* ChatViewController.swift */; };
+		DD872C0523F3D03C003B2B42 /* ChatInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD872BFF23F3D03C003B2B42 /* ChatInteractor.swift */; };
 		EA77FE79CC6A0A97572FCFBA /* Pods_TesQiscusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAAFBF49E2FBD5D977C1325 /* Pods_TesQiscusTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,18 +71,19 @@
 		DD872BCA23F3B76A003B2B42 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		DD872BCB23F3B76A003B2B42 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DD872BCC23F3B76A003B2B42 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
-		DD872BDF23F3B79A003B2B42 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
-		DD872BE023F3B79A003B2B42 /* ChatWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWorker.swift; sourceTree = "<group>"; };
-		DD872BE123F3B79A003B2B42 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
-		DD872BE223F3B79A003B2B42 /* ChatModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModels.swift; sourceTree = "<group>"; };
-		DD872BE323F3B79A003B2B42 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		DD872BE423F3B79A003B2B42 /* ChatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInteractor.swift; sourceTree = "<group>"; };
 		DD872BEB23F3B7B2003B2B42 /* ChatListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListPresenter.swift; sourceTree = "<group>"; };
 		DD872BEC23F3B7B2003B2B42 /* ChatListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListWorker.swift; sourceTree = "<group>"; };
 		DD872BED23F3B7B2003B2B42 /* ChatListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListRouter.swift; sourceTree = "<group>"; };
 		DD872BEE23F3B7B2003B2B42 /* ChatListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListModels.swift; sourceTree = "<group>"; };
 		DD872BEF23F3B7B2003B2B42 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
 		DD872BF023F3B7B2003B2B42 /* ChatListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListInteractor.swift; sourceTree = "<group>"; };
+		DD872BF823F3CE7A003B2B42 /* ChatViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewCell.swift; sourceTree = "<group>"; };
+		DD872BFA23F3D03C003B2B42 /* ChatPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenter.swift; sourceTree = "<group>"; };
+		DD872BFB23F3D03C003B2B42 /* ChatWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatWorker.swift; sourceTree = "<group>"; };
+		DD872BFC23F3D03C003B2B42 /* ChatRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRouter.swift; sourceTree = "<group>"; };
+		DD872BFD23F3D03C003B2B42 /* ChatModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModels.swift; sourceTree = "<group>"; };
+		DD872BFE23F3D03C003B2B42 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		DD872BFF23F3D03C003B2B42 /* ChatInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,14 +201,23 @@
 		DD872BC623F3B750003B2B42 /* ChatView */ = {
 			isa = PBXGroup;
 			children = (
-				DD872BDF23F3B79A003B2B42 /* ChatPresenter.swift */,
-				DD872BE023F3B79A003B2B42 /* ChatWorker.swift */,
-				DD872BE123F3B79A003B2B42 /* ChatRouter.swift */,
-				DD872BE223F3B79A003B2B42 /* ChatModels.swift */,
-				DD872BE323F3B79A003B2B42 /* ChatViewController.swift */,
-				DD872BE423F3B79A003B2B42 /* ChatInteractor.swift */,
+				DD872BF723F3CE36003B2B42 /* View */,
+				DD872BFA23F3D03C003B2B42 /* ChatPresenter.swift */,
+				DD872BFB23F3D03C003B2B42 /* ChatWorker.swift */,
+				DD872BFC23F3D03C003B2B42 /* ChatRouter.swift */,
+				DD872BFD23F3D03C003B2B42 /* ChatModels.swift */,
+				DD872BFE23F3D03C003B2B42 /* ChatViewController.swift */,
+				DD872BFF23F3D03C003B2B42 /* ChatInteractor.swift */,
 			);
 			path = ChatView;
+			sourceTree = "<group>";
+		};
+		DD872BF723F3CE36003B2B42 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD872BF823F3CE7A003B2B42 /* ChatViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,27 +388,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD872BE723F3B79A003B2B42 /* ChatRouter.swift in Sources */,
-				DD872BE823F3B79A003B2B42 /* ChatModels.swift in Sources */,
+				DD872C0023F3D03C003B2B42 /* ChatPresenter.swift in Sources */,
 				DD872BCE23F3B76A003B2B42 /* LoginWorker.swift in Sources */,
 				DD872BF223F3B7B2003B2B42 /* ChatListWorker.swift in Sources */,
+				DD872C0123F3D03C003B2B42 /* ChatWorker.swift in Sources */,
 				DD872BCD23F3B76A003B2B42 /* LoginPresenter.swift in Sources */,
 				DD872BD023F3B76A003B2B42 /* LoginModels.swift in Sources */,
 				DD872BCF23F3B76A003B2B42 /* LoginRouter.swift in Sources */,
 				DD872BF123F3B7B2003B2B42 /* ChatListPresenter.swift in Sources */,
 				DD872BF623F3B7B2003B2B42 /* ChatListInteractor.swift in Sources */,
 				DD872BF323F3B7B2003B2B42 /* ChatListRouter.swift in Sources */,
-				DD872BEA23F3B79A003B2B42 /* ChatInteractor.swift in Sources */,
+				DD872C0523F3D03C003B2B42 /* ChatInteractor.swift in Sources */,
+				DD872C0423F3D03C003B2B42 /* ChatViewController.swift in Sources */,
 				DD872BF423F3B7B2003B2B42 /* ChatListModels.swift in Sources */,
-				DD872BE523F3B79A003B2B42 /* ChatPresenter.swift in Sources */,
+				DD872C0323F3D03C003B2B42 /* ChatModels.swift in Sources */,
 				DD872BD123F3B76A003B2B42 /* LoginViewController.swift in Sources */,
 				DD872BA723F3B494003B2B42 /* ViewController.swift in Sources */,
 				DD872BF523F3B7B2003B2B42 /* ChatListViewController.swift in Sources */,
+				DD872C0223F3D03C003B2B42 /* ChatRouter.swift in Sources */,
 				DD872BA323F3B494003B2B42 /* AppDelegate.swift in Sources */,
 				DD872BA523F3B494003B2B42 /* SceneDelegate.swift in Sources */,
-				DD872BE623F3B79A003B2B42 /* ChatWorker.swift in Sources */,
 				DD872BD223F3B76A003B2B42 /* LoginInteractor.swift in Sources */,
-				DD872BE923F3B79A003B2B42 /* ChatViewController.swift in Sources */,
+				DD872BF923F3CE7A003B2B42 /* ChatViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,21 +11,38 @@
 //
 
 import UIKit
+import QiscusCore
 
 enum Chat
 {
-  // MARK: Use cases
-  
-  enum Something
-  {
-    struct Request
+    // MARK: Use cases
+    
+    enum FetchChat
     {
+        struct Request
+        {
+        }
+        struct Response
+        {
+            let comments: [CommentModel]
+        }
+        struct ViewModel
+        {
+            let comments: [CommentModel]
+        }
     }
-    struct Response
+    
+    enum SendChat
     {
+        struct Request
+        {
+            let message: String
+        }
+        struct Response
+        {
+        }
+        struct ViewModel
+        {
+        }
     }
-    struct ViewModel
-    {
-    }
-  }
 }

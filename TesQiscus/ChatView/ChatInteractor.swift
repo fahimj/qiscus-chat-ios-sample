@@ -11,31 +11,33 @@
 //
 
 import UIKit
+import QiscusCore
 
 protocol ChatBusinessLogic
 {
-  func doSomething(request: Chat.Something.Request)
+    func fetchChats(request: Chat.FetchChat.Request)
 }
 
 protocol ChatDataStore
 {
-  //var name: String { get set }
+    //var name: String { get set }
 }
 
 class ChatInteractor: ChatBusinessLogic, ChatDataStore
 {
-  var presenter: ChatPresentationLogic?
-  var worker: ChatWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: Chat.Something.Request)
-  {
-    worker = ChatWorker()
-    worker?.doSomeWork()
+    var presenter: ChatPresentationLogic?
+    var worker: ChatWorker?
+    //var name: String = ""
+    var roomId:String!
     
-    let response = Chat.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    // MARK: Do something
+    
+    func fetchChats(request: Chat.FetchChat.Request) {
+        QiscusCore.shared.getChatRoomWithMessages(roomId: self.roomId, onSuccess: {room, comments in
+            let response = Chat.FetchChat.Response(comments: comments)
+            self.presenter?.present(response: response)
+        }, onError: {error in
+            
+        })
+    }
 }

@@ -16,12 +16,14 @@ import QiscusCore
 protocol ChatListBusinessLogic
 {
     func fetchChatList(request: ChatList.FetchChatList.Request)
+    func createNewRoom(request: ChatList.CreateNewRoom.Request)
     
 }
 
 protocol ChatListDataStore
 {
     var chatrooms: [RoomModel]? { get set }
+    var newChatRoom: RoomModel? { get set }
 }
 
 class ChatListInteractor: ChatListBusinessLogic, ChatListDataStore
@@ -30,22 +32,70 @@ class ChatListInteractor: ChatListBusinessLogic, ChatListDataStore
     var worker: ChatListWorker?
     
     var chatrooms: [RoomModel]?
+    var newChatRoom: RoomModel?
     //var name: String = ""
     
     // MARK: Do something
+    func createNewRoom(request: ChatList.CreateNewRoom.Request) {
+        QiscusCore.shared.chatUser(userId: request.username, onSuccess: { (room, comments) in
+            self.newChatRoom = room
+            self.presenter?.present(response:
+                ChatList.CreateNewRoom.Response())
+            
+        }) { (error) in
+        }
+    }
     
     func fetchChatList(request: ChatList.FetchChatList.Request) {
         QiscusCore.shared.getAllChatRooms(showParticipant: true, showRemoved: false, showEmpty: true, page: 1, limit: 100, onSuccess: { (results, meta) in
             
             self.chatrooms = results
             self.presenter?.present(response: ChatList.FetchChatList.Response(rooms: results))
-//            self.rooms = self.filterRoom(data: results)
-//            self.rooms = self.self.isShowUnread ? self.filterUnreadRooms(rooms: self.rooms) ?? [] : self.rooms
-//            self.rooms = self.filterSearchRooms(rooms: self.rooms, query: self.query)
-//            self.viewPresenter?.didFinishLoadChat(rooms: self.rooms)
             
         }, onError: { (error) in
-//            self.viewPresenter?.setEmptyData(message: "")
+            // show error
         })
     }
+    
+}
+
+extension ChatListInteractor : QiscusCoreDelegate
+{
+    func onRoomMessageReceived(_ room: RoomModel, message: CommentModel) {
+        fetchChatList(request: ChatList.FetchChatList.Request())
+    }
+    
+    func onRoomMessageDeleted(room: RoomModel, message: CommentModel) {
+        fetchChatList(request: ChatList.FetchChatList.Request())
+    }
+    
+    func onRoomDidChangeComment(comment: CommentModel, changeStatus status: CommentStatus) {
+        fetchChatList(request: ChatList.FetchChatList.Request())
+    }
+    
+    func onRoomMessageDelivered(message: CommentModel) {
+        fetchChatList(request: ChatList.FetchChatList.Request())
+    }
+    
+    func onRoomMessageRead(message: CommentModel) {
+        fetchChatList(request: ChatList.FetchChatList.Request())
+    }
+    
+    func onRoom(update room: RoomModel) {
+        fetchChatList(request: ChatList.FetchChatList.Request())
+    }
+    
+    func onRoom(deleted room: RoomModel) {
+        fetchChatList(request: ChatList.FetchChatList.Request())
+    }
+    
+    func gotNew(room: RoomModel) {
+        fetchChatList(request: ChatList.FetchChatList.Request())
+    }
+    
+    func onChatRoomCleared(roomId: String) {
+        fetchChatList(request: ChatList.FetchChatList.Request())
+    }
+    
+    
 }

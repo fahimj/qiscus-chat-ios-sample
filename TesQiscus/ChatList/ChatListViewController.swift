@@ -13,10 +13,12 @@
 import QiscusCore
 import UIKit
 import AlamofireImage
+import IJProgressView
 
 protocol ChatListDisplayLogic: class
 {
     func display(viewModel: ChatList.FetchChatList.ViewModel)
+    func display(viewModel: ChatList.CreateNewRoom.ViewModel)
 }
 
 class ChatListViewController: UITableViewController, ChatListDisplayLogic
@@ -52,6 +54,8 @@ class ChatListViewController: UITableViewController, ChatListDisplayLogic
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
+        
+        QiscusCore.delegate = interactor
     }
     
     // MARK: Routing
@@ -86,12 +90,33 @@ class ChatListViewController: UITableViewController, ChatListDisplayLogic
         interactor?.fetchChatList(request: request)
     }
     
+    @IBAction func newChatAction(_ sender: Any) {
+        let ac = UIAlertController(title: "Enter the username you want to chat with", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+
+        let submitAction = UIAlertAction(title: "Submit", style: .default) { [unowned ac] _ in
+            let username = ac.textFields![0].text
+            self.interactor?.createNewRoom(request: ChatList.CreateNewRoom.Request(username: username ?? ""))
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+
+        ac.addAction(submitAction)
+        ac.addAction(cancelAction)
+        
+        present(ac, animated: true)
+    }
+    
     func display(viewModel: ChatList.FetchChatList.ViewModel)
     {
         //nameTextField.text = viewModel.name
         chatList = viewModel.rooms
         print(viewModel)
         tableView.reloadData()
+    }
+    
+    func display(viewModel: ChatList.CreateNewRoom.ViewModel)
+    {
+        router?.routeToNewChat()
     }
 }
 

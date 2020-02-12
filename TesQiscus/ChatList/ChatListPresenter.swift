@@ -15,8 +15,7 @@ import UIKit
 protocol ChatListPresentationLogic
 {
     func present(response: ChatList.FetchChatList.Response)
-    
-    
+    func present(response: ChatList.CreateNewRoom.Response)
 }
 
 class ChatListPresenter: ChatListPresentationLogic
@@ -28,6 +27,12 @@ class ChatListPresenter: ChatListPresentationLogic
     func present(response: ChatList.FetchChatList.Response)
     {
         let viewModel = ChatList.FetchChatList.ViewModel(rooms: response.rooms)
+        viewController?.display(viewModel: viewModel)
+    }
+    
+    func present(response: ChatList.CreateNewRoom.Response)
+    {
+        let viewModel = ChatList.CreateNewRoom.ViewModel()
         viewController?.display(viewModel: viewModel)
     }
 }

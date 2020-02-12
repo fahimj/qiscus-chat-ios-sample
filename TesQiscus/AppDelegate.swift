@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         QiscusCore.enableDebugMode(value: true)
-        QiscusCore.setup(AppID: "schotersq-iqzqz8f0goh") // sdksample
+        QiscusCore.setup(AppID: "sdksample") // sdksample
         
         
         return true

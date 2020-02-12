@@ -11,54 +11,72 @@
 //
 
 import UIKit
+import QiscusCore
 
 @objc protocol ChatListRoutingLogic
 {
-  func routeToChatView(segue: UIStoryboardSegue?)
+    func routeToChatView(segue: UIStoryboardSegue?)
+    func routeToNewChat()
 }
 
 protocol ChatListDataPassing
 {
-  var dataStore: ChatListDataStore? { get }
+    var dataStore: ChatListDataStore? { get }
 }
 
 class ChatListRouter: NSObject, ChatListRoutingLogic, ChatListDataPassing
 {
-  weak var viewController: ChatListViewController?
-  var dataStore: ChatListDataStore?
-  
-  // MARK: Routing
-  
-  func routeToChatView(segue: UIStoryboardSegue?)
-  {
-    if let segue = segue {
-      let destinationVC = segue.destination as! ChatViewController
-      var destinationDS = destinationVC.router!.dataStore!
-        
-      passDataToChatView(source: dataStore!, destination: &destinationDS)
-    } else {
-//      let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//      let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-//      var destinationDS = destinationVC.router!.dataStore!
-//      passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-//      navigateToSomewhere(source: viewController!, destination: destinationVC)
-    }
-  }
-
-  // MARK: Navigation
-  
-  func navigateToChatView(source: ChatListViewController, destination: ChatViewController)
-  {
-    source.show(destination, sender: nil)
-  }
-  
-  // MARK: Passing data
-  
-  func passDataToChatView(source: ChatListDataStore, destination: inout ChatDataStore)
-  {
-    let selectedRow = viewController!.tableView.indexPathForSelectedRow!.row
-    let selectedRoom = source.chatrooms![selectedRow]
+    weak var viewController: ChatListViewController?
+    var dataStore: ChatListDataStore?
     
-    destination.room = selectedRoom
-  }
+    // MARK: Routing
+    
+    
+    func routeToChatView(segue: UIStoryboardSegue?)
+    {
+        if let segue = segue {
+            let destinationVC = segue.destination as! ChatViewController
+            var destinationDS = destinationVC.router!.dataStore!
+            
+            passDataToChatView(source: dataStore!, destination: &destinationDS)
+        } else {
+            //      let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            //      let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
+            //      var destinationDS = destinationVC.router!.dataStore!
+            //      passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+            //      navigateToSomewhere(source: viewController!, destination: destinationVC)
+        }
+    }
+    
+    func routeToNewChat() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+        var destinationDS = destinationVC.router!.dataStore!
+        
+        passDataToNewChatView(source: dataStore!, destination: &destinationDS)
+        navigateToChatView(source: viewController!, destination: destinationVC)
+    }
+    
+    // MARK: Navigation
+    
+    func navigateToChatView(source: ChatListViewController, destination: ChatViewController)
+    {
+        source.show(destination, sender: nil)
+    }
+    
+    // MARK: Passing data
+    func passDataToNewChatView(source: ChatListDataStore, destination: inout ChatDataStore)
+    {
+        let selectedRoom = source.newChatRoom
+        
+        destination.room = selectedRoom
+    }
+    
+    func passDataToChatView(source: ChatListDataStore, destination: inout ChatDataStore)
+    {
+        let selectedRow = viewController!.tableView.indexPathForSelectedRow!.row
+        let selectedRoom = source.chatrooms![selectedRow]
+        
+        destination.room = selectedRoom
+    }
 }

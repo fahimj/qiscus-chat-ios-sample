@@ -155,7 +155,13 @@
                             <outlet property="delegate" destination="RGP-SZ-bJz" id="3bY-UB-43u"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="C7N-uE-3Ua"/>
+                    <navigationItem key="navigationItem" id="C7N-uE-3Ua">
+                        <barButtonItem key="rightBarButtonItem" title="New Chat" id="Brr-7Z-ffI">
+                            <connections>
+                                <action selector="newChatAction:" destination="RGP-SZ-bJz" id="HEE-v4-U3b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PZe-eh-ATh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +170,7 @@
         <!--Chat View Controller-->
         <scene sceneID="LP3-cN-rTm">
             <objects>
-                <viewController id="hpH-5B-o6e" customClass="ChatViewController" customModule="TesQiscus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="hpH-5B-o6e" customClass="ChatViewController" customModule="TesQiscus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0CB-Yj-Nbf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

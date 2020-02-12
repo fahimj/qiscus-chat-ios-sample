@@ -15,20 +15,36 @@ import QiscusCore
 
 enum ChatList
 {
-  // MARK: Use cases
-  
-  enum FetchChatList
-  {
-    struct Request
+    // MARK: Use cases
+    
+    enum FetchChatList
     {
+        struct Request
+        {
+        }
+        struct Response
+        {
+            let rooms:[RoomModel]
+        }
+        struct ViewModel
+        {
+            let rooms:[RoomModel]
+        }
     }
-    struct Response
+    
+    enum CreateNewRoom
     {
-        let rooms:[RoomModel]
+        struct Request
+        {
+            let username:String
+        }
+        struct Response
+        {
+            
+        }
+        struct ViewModel
+        {
+           
+        }
     }
-    struct ViewModel
-    {
-        let rooms:[RoomModel]
-    }
-  }
 }

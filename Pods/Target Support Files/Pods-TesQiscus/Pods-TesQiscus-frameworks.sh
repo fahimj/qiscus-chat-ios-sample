@@ -161,8 +161,11 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IJProgressView/IJProgressView.framework"
   install_framework "${PODS_ROOT}/QiscusCore/QiscusCore.framework"
   install_dsym "${PODS_ROOT}/QiscusCore/QiscusCore.framework.dSYM"
   install_framework "${PODS_ROOT}/QiscusRealtime/QiscusRealtime.framework"
@@ -170,8 +173,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/IJProgressView/IJProgressView.framework"
   install_framework "${PODS_ROOT}/QiscusCore/QiscusCore.framework"
   install_dsym "${PODS_ROOT}/QiscusCore/QiscusCore.framework.dSYM"
   install_framework "${PODS_ROOT}/QiscusRealtime/QiscusRealtime.framework"

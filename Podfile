@@ -7,7 +7,8 @@ target 'TesQiscus' do
 
   # Pods for TesQiscus
   pod 'QiscusCore' #, "1.2.3"
-  pod 'IJProgressView'
+  pod 'IJProgressView', :git => 'https://github.com/Isuru-Nanayakkara/IJProgressView.git'
+  pod 'AlamofireImage'
   # pod 'Alamofire'
 
   target 'TesQiscusTests' do

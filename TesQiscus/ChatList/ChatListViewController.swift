@@ -12,6 +12,7 @@
 
 import QiscusCore
 import UIKit
+import AlamofireImage
 
 protocol ChatListDisplayLogic: class
 {
@@ -70,6 +71,7 @@ class ChatListViewController: UITableViewController, ChatListDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.tableView.tableFooterView = UIView()
         fetchChatList()
     }
     
@@ -87,12 +89,14 @@ class ChatListViewController: UITableViewController, ChatListDisplayLogic
     func display(viewModel: ChatList.FetchChatList.ViewModel)
     {
         //nameTextField.text = viewModel.name
-        tableView.reloadData()
         chatList = viewModel.rooms
         print(viewModel)
+        tableView.reloadData()
     }
 }
 
+
+// UITableViewDataSource
 extension ChatListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chatList?.count ?? 0
@@ -100,9 +104,12 @@ extension ChatListViewController {
     
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "xxx", for: indexPath) //as! CELL
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatRoomCell", for: indexPath) //as! CELL
         let room = chatList?[indexPath.row]
-//        cell.imageView?.image
+        cell.imageView?.af_setImage(withURL: try! (room!.avatarUrl!.asURL()))
+        cell.imageView?.contentMode = .scaleAspectFill
+        cell.textLabel!.text = room?.name
+        cell.detailTextLabel!.text = room?.lastComment?.message
         
 //        cell.scholarship = scholarship
         return cell
